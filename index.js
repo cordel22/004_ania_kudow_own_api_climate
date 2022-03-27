@@ -1,4 +1,4 @@
-const PORT = 8000
+const PORT = process.env.PORT || 8000 //  for deploying on heroku
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -70,7 +70,7 @@ app.get('/news', (req,res) => {
   res.json(articles)
 })
 
-app.get('/news/:newspaperId', async (req,res) => {
+app.get('/news/:newspaperId', /* async */ (req,res) => {
   /* console.log(req.params.newspaperId) */
   const newspaperId = req.params.newspaperId
 
