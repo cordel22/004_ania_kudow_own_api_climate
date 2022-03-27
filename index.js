@@ -74,9 +74,12 @@ app.get('/news/:newspaperId', async (req,res) => {
   /* console.log(req.params.newspaperId) */
   const newspaperId = req.params.newspaperId
 
-  const newspaper = newspapers.filter(newspaper => newspaper.name == newspaperId)
+  /* const newspaper = newspapers.filter(newspaper => newspaper.name == newspaperId) */
 
-  console.log(newspaper)
+  const newspaperAddress = newspapers.filter(newspaper => newspaper.name == newspaperId)[0].address
+
+
+  console.log(newspaperAddress)
   /* axios.get() */
 })
 
