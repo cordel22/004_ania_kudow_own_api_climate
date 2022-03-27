@@ -70,4 +70,8 @@ app.get('/news', (req,res) => {
   res.json(articles)
 })
 
+app.get('/news/:newspaperId', async (req,res) => {
+  console.log(req.params.newspaperId)
+})
+
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
